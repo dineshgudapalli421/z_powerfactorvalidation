@@ -53,7 +53,7 @@
         <m:IconTabFilter  text="Usage Information" key="usageInfo">
         <Table id="tblUsageInfo"
 				ariaLabelledBy="title"
-				rows="{/modelData}"
+				rows="{EngModel>/}"
 				enableColumnFreeze="true">
                 <extension>
 					<m:OverflowToolbar style="Clear">
@@ -62,138 +62,116 @@
 				</extension>
                 <columns>
                     <Column
-						width="11rem"
-						sortProperty="monthPeriod"
-						filterProperty="monthPeriod">
+						width="11rem">
 						<m:Label text="Month Period" textAlign="Center" width="100%"/>
 						<template>
-							<m:Text text="{monthPeriod}"/>
+							<m:Text text="{EngModel>Date}"/>
 						</template>
 					</Column>
                     <Column
-						width="11rem"
-						sortProperty="consumption"
-						filterProperty="consumption">
+						width="11rem">
 						<m:Label text="Consumption(kWh)" textAlign="Center" width="100%"/>
 						<template>
-							<m:Text text="{consumption}"/>
+							<m:Text text="{EngModel>ConsumptionKWH}"/>
 						</template>
 					</Column>
                     <Column
 						width="11rem"
-						sortProperty="kW"
-						filterProperty="kW"
 						headerSpan="3,1">
 						<multiLabels>
 							<m:Label text="Individual Meter @ Meter Peak" textAlign="Center" width="100%"/>
 							<m:Label text="kW" textAlign="Center" width="100%"/>
 						</multiLabels>
 						<template>
-							<m:Text text="{kW}" wrapping="false"/>
+							<m:Text text="{EngModel>MeterPeakKW}" wrapping="false"/>
 						</template>
 					</Column>
                     <Column
 						width="11rem"
-						sortProperty="kVA"
-						filterProperty="kVA"
 						headerSpan="2,1">
 						<multiLabels>
 							<m:Label text="Individual Meter @ Meter Peak" textAlign="Center" width="100%"/>
 							<m:Label text="kVA" textAlign="Center" width="100%"/>
 						</multiLabels>
 						<template>
-							<m:Text text="{kVA}" wrapping="false"/>
+							<m:Text text="{EngModel>MeterPeakKVA}" wrapping="false"/>
 						</template>
 					</Column>
                     <Column
 						width="11rem"
-						sortProperty="pF"
-						filterProperty="pF"
 						headerSpan="3">
 						<multiLabels>
 							<m:Label text="Individual Meter @ Meter Peak" textAlign="Center" width="100%"/>
 							<m:Label text="PF" textAlign="Center" width="100%"/>
 						</multiLabels>
 						<template>
-							<m:Text text="{pF}" wrapping="false"/>
+							<m:Text text="{EngModel>MeterPeakPF}" wrapping="false"/>
 						</template>
 					</Column>
                     <Column
 						width="11rem"
-						sortProperty="tkW"
-						filterProperty="tkW"
 						headerSpan="3,1">
 						<multiLabels>
 							<m:Label text="Individual Meter @ Transformer Peak" textAlign="Center" width="100%"/>
 							<m:Label text="kW" textAlign="Center" width="100%"/>
 						</multiLabels>
 						<template>
-							<m:Text text="{tkW}" wrapping="false"/>
+							<m:Text text="{EngModel>MeterTransformerKW}" wrapping="false"/>
 						</template>
 					</Column>
                     <Column
 						width="11rem"
-						sortProperty="tkVA"
-						filterProperty="tkVA"
 						headerSpan="2,1">
 						<multiLabels>
 							<m:Label text="Individual Meter @ Transformer Peak" textAlign="Center" width="100%"/>
 							<m:Label text="kVA" textAlign="Center" width="100%"/>
 						</multiLabels>
 						<template>
-							<m:Text text="{tkVA}" wrapping="false"/>
+							<m:Text text="{EngModel>MeterTransformerKVA}" wrapping="false"/>
 						</template>
 					</Column>
                     <Column
 						width="11rem"
-						sortProperty="tpF"
-						filterProperty="tpF"
 						headerSpan="3">
 						<multiLabels>
 							<m:Label text="Individual Meter @ Transformer Peak" textAlign="Center" width="100%"/>
 							<m:Label text="PF" textAlign="Center" width="100%"/>
 						</multiLabels>
 						<template>
-							<m:Text text="{tpF}" wrapping="false"/>
+							<m:Text text="{EngModel>MeterTransformerPF}" wrapping="false"/>
 						</template>
 					</Column>
                     <Column
 						width="11rem"
-						sortProperty="wkW"
-						filterProperty="wkW"
 						headerSpan="3,1">
 						<multiLabels>
 							<m:Label text="Individual Meter @ Meter Worst PF" textAlign="Center" width="100%"/>
 							<m:Label text="kW" textAlign="Center" width="100%"/>
 						</multiLabels>
 						<template>
-							<m:Text text="{wkW}" wrapping="false"/>
+							<m:Text text="{EngModel>MeterWorstKW}" wrapping="false"/>
 						</template>
 					</Column>
                     <Column
 						width="11rem"
-						sortProperty="wkVA"
-						filterProperty="wkVA"
 						headerSpan="2,1">
 						<multiLabels>
 							<m:Label text="Individual Meter @ Meter Worst PF" textAlign="Center" width="100%"/>
 							<m:Label text="kVA" textAlign="Center" width="100%"/>
 						</multiLabels>
 						<template>
-							<m:Text text="{wkVA}" wrapping="false"/>
+							<m:Text text="{EngModel>MeterWorstKVA}" wrapping="false"/>
 						</template>
 					</Column>
                     <Column
 						width="11rem"
-						sortProperty="tpF"
-						filterProperty="tpF"
 						headerSpan="3">
 						<multiLabels>
 							<m:Label text="Individual Meter @ Meter Worst PF" textAlign="Center" width="100%"/>
 							<m:Label text="PF" textAlign="Center" width="100%"/>
 						</multiLabels>
 						<template>
-							<m:Text text="{wpF}" wrapping="false"/>
+							<m:Text text="{EngModel>MeterWorstPF}" wrapping="false"/>
 						</template>
 					</Column>
                 </columns>

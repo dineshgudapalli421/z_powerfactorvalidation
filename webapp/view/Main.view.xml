@@ -45,39 +45,31 @@
 								label="Device Location" 
 								groupName="Group1" 
 								visibleInFilterBar="true" mandatory="false">
-                                    <fb:control>                                        
-                                        <MultiInput id="idDevLocation"
-            valueHelpIconSrc="sap-icon://value-help" value="{filters>/idDevLocation}"
-            width="60%" 
-            valueHelpRequest="onSingleConditionVHRequested"/>
-                                        
+                                    <fb:control> 
+                                     <Input
+                                         id="idDevLocation" 
+										 width="90%"  
+										 showValueHelp="false"
+										 value="{filters>/idDevLocation}"
+                                        >
+                                        </Input>  
                                     </fb:control>
                                 </fb:FilterGroupItem>   
 									<fb:FilterGroupItem 
-										name="periodFrom" 
-										label="Period From" 
+										name="Period " 
+										label="Period" 
 										groupName="Group1" 
-										visibleInFilterBar="true" mandatory="true">
-											<fb:control>											
-                                           <DatePicker
-                    id="idDTP1" width="100%"
-                    placeholder="Enter Date"/>                                                                                    
+										visibleInFilterBar="true">
+											<fb:control>												
+                                           <DateRangeSelection
+                                                id="billingPeriodRange"
+                                                width="90%"
+                                                displayFormat="MM-yyyy"
+                                                valueFormat="yyyy-MM-dd"
+                                                change="onBillingPeriodRangeChange"
+                                                placeholder="MM-YYYY to MM-YYYY" />                                                                                    
 											</fb:control>
-										</fb:FilterGroupItem>
-										 <!-- Profile Ratio -->
-										<fb:FilterGroupItem
-											name="periodTo"
-											label="Period To"
-											groupName="Group1"
-											visibleInFilterBar="true" mandatory="true">
-											<fb:control>
-												<DatePicker
-                    id="idDTP2" width="100%"
-                    placeholder="Enter Date"/>
-											</fb:control>
-										</fb:FilterGroupItem>
-										 									
-                               
+                                            </fb:FilterGroupItem> 									
                             </fb:filterGroupItems>
 						
             </fb:FilterBar>
